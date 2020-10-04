@@ -67,7 +67,7 @@ class HomeTableViewController: UITableViewController {
             self.tableView.reloadData()
             
         }, failure: { (Error) in
-            print("Could not retrieve tweets! oh no!!")
+            print("Could not retrieve tweets! oops")
         })
     }
     
