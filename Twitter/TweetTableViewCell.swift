@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AlamofireImage
 
 class TweetTableViewCell: UITableViewCell {
 
@@ -14,6 +15,41 @@ class TweetTableViewCell: UITableViewCell {
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var tweetContent: UILabel!
     
+    @IBOutlet weak var retweetButton: UIButton!
+    @IBOutlet weak var favButton: UIButton!
+    
+    var favorited:Bool = false
+    var tweetId:Int = -1 //so we know its not set
+    
+    @IBAction func favoriteTweet(_ sender: Any) {
+        let toBeFavorited = !favorited
+        if (toBeFavorited){
+            TwitterAPICaller.client?.favoriteTweet(tweetId: tweetId, success: {
+                self.setFavorited(true)
+            }, failure: { (error) in
+                print("Favorite did not succeed: \(error)")
+            })
+        } else {
+            TwitterAPICaller.client?.unfavoriteTweet(tweetId: tweetId, success: {
+                self.setFavorited(false)
+            }, failure: { (error) in
+                print("Unfavorite did not succeed \(error)")
+            })
+        }
+    }
+    
+    
+    
+    func setFavorited(_ isFavorited:Bool) {
+        favorited = isFavorited
+        if (favorited){
+            favButton.setImage(UIImage(named:"Hearts-red"), for: UIControl.State.normal)
+        } else{
+            favButton.setImage(UIImage(named:"Hearts-grey"), for: UIControl.State.normal)
+        }
+    }
+    @IBAction func retweet(_ sender: Any) {
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()

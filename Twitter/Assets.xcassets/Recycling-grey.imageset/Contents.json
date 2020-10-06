@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "Recycling-595b40b75ba036ed117d8e87.svg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "Recycling-595b40b75ba036ed117d8e87-1.svg",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "Recycling-595b40b75ba036ed117d8e87-2.svg",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
