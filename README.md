@@ -22,7 +22,7 @@ The following **bonus** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://github.com/curiousjazz77/twitter_ios_app/blob/main/Tweet_Fav_Retweet_Walkthrough.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 
 # Project 3 - *Tweeter*
