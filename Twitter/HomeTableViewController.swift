@@ -109,6 +109,9 @@ class HomeTableViewController: UITableViewController {
         // in case the data from the server isn't what you expect
         // not guranteed to be
         cell.tweetId = tweetArray[indexPath.row]["id"] as! Int
+        cell.setRetweeted(tweetArray[indexPath.row]["retweeted"] as! Bool)
+        
+        
         
         return cell
     }
